@@ -10,7 +10,6 @@ public class NhnMartShell {
 
         BuyList buyList = inputBuyListFromShell();
 
-        // TODO 본인이름 영어로 변수명 작성!
         // 본인이름을 각자 맞게 영어로 변경
         // 홍길동 학생
         // -> hongGilDong or gilDong
@@ -27,11 +26,13 @@ public class NhnMartShell {
     }
 
     private static BuyList inputBuyListFromShell() {
-        // TODO Scanner 입력을 받아 buyList 만들기
+
         Scanner scanner = new Scanner(System.in);
         BuyList buyList = new BuyList();
 
-        buyList.add(scanner.nextLine());
+        System.out.print("> ");
+        String list = scanner.nextLine();
+        buyList.add(list);
 
         scanner.close();
         return buyList;
