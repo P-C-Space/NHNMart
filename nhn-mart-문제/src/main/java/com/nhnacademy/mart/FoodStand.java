@@ -7,8 +7,11 @@ public class FoodStand {
     private final ArrayList<Food> foods = new ArrayList<>();
 
     public void add(Food food) {
-        this.foods.add(food);
+        foods.add(food);
     }
-    // TODO 장바구니에 담은 Food 삭제 구현
+
+    public void delete(Food food){
+        foods.remove(food);
+    }
 
 }
