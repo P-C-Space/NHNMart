@@ -4,6 +4,10 @@ public class NhnMart {
 
     private final FoodStand foodStand = new FoodStand();
 
+    public NhnMart() {
+        System.out.println("NHN 마트에 오신 것을 환영합니다. 사고 싶은 물건을 골라주세요.");
+    }
+
     public void prepareMart() {
         fillFoodStand();
     }
@@ -22,6 +26,7 @@ public class NhnMart {
         for (int i = 0; i < 20; i++) {
             foodStand.add(new Food("사과", 2_000));
         }
+
     }
 
     public Basket provideBasket() {
@@ -31,4 +36,9 @@ public class NhnMart {
     public FoodStand getFoodStand() {
         return foodStand;
     }
+
+    public Counter getCounter() {
+        return new Counter();
+    }
+
 }
