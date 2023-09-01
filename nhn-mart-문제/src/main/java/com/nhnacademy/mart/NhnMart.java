@@ -1,10 +1,14 @@
 package com.nhnacademy.mart;
 
-public class NhnMart {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+public class NhnMart {
+    private static final Logger logger = LoggerFactory.getLogger(NhnMart.class);
     private final FoodStand foodStand = new FoodStand();
 
     public NhnMart() {
+        logger.info("NHN마트 생성");
         System.out.println("NHN 마트에 오신 것을 환영합니다. 사고 싶은 물건을 골라주세요.");
     }
 

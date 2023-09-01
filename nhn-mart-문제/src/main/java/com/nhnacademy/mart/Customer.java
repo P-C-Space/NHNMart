@@ -1,6 +1,6 @@
 package com.nhnacademy.mart;
 
-public class Customer {
+class Customer {
 
     // 고객이 가진 돈
     private int BuyableMoney;
@@ -27,8 +27,6 @@ public class Customer {
         for (BuyList.Item item : buyList.getItems()) {             // 구매 리스트 상품들
             for (int i = 0; i < item.getAmount(); i++) {           // 개수만큼
                 basket.add(foodStand.delete(item.getName()));      // 진열대에서 삭제 후 장바구니 추가
-
-
             }
         }
     }
@@ -46,4 +44,7 @@ public class Customer {
         System.out.println("고객님 결제 후 잔액 : " + BuyableMoney + "원");
     }
 
+    public int getBuyableMoney() {
+        return BuyableMoney;
+    }
 }
