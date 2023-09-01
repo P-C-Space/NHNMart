@@ -31,9 +31,9 @@ public class NhnMartShell {
         Scanner scanner = new Scanner(System.in);
         BuyList buyList = new BuyList();
 
-        buyList.add(???);
+        buyList.add(scanner.nextLine());
 
         scanner.close();
-        return null;
+        return buyList;
     }
 }
